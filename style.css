@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    text-align: center;
+    background-image: url(https://wallpapercrafter.com/sizes/2560x1440/101585-Horizon-Zero-Dawn-PlayStation-4-video-games-sky-dark-mountains-screen-shot.png);
+    background-size: cover;
+}
+
+#game {
+  position: relative;
+}
+
+#game::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+body:has(#sign1:hover) #game::after,
+body:has(#sign2:hover) #game::after,
+body:has(#sign3:hover) #game::after {
+  opacity: 1;
+}
+
+#sign1, #sign2, #sign3 {
+  position: relative;
+  z-index: 2;
+}
+
+h1{
+    font-size: 70px;
+    font-weight: 700;
+    color: #d6c9da;
+}
+
+#choices{
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+#rock, #paper, #scissors{
+    height: 190px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sign1, #sign2, #sign3{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#sign1:hover, #sign2:hover, #sign3:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+}
+
+#word1, #word2, #word3{
+    height: 100px;
+    width: 90px;
+}
+
+#sign1 img, #sign2 img, #sign3 img{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+}
+
+#word1 img, #word2 img, #word3 img{
+    height: 100px;
+    width: 90px;
+}
+
+#score-board{
+    height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.score{
+    height: 150px;
+    width: 150px;
+    font-size: 50px;
+    color: white;
+    background-image: url(shield.png);
+    background-size: cover;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.chrac{
+    font-size: 30px;
+}
+
+#vs{
+    height: 190px;
+    width: 120px;
+}
+
+#vs img{
+    height: 190px;
+    width: 120px;
+}
