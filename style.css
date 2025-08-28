@@ -52,7 +52,7 @@ h1{
   gap: 40px;
 }
 
-#rock, #paper, #scissors{
+.choice {
     height: 190px;
     width: 90px;
     display: flex;
@@ -108,8 +108,14 @@ h1{
     text-align: center;
 }
 
+#player, #comp{
+    margin-top: 13px;
+}
+
 .chrac{
     font-size: 30px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
 }
 
 #vs{
@@ -120,4 +126,17 @@ h1{
 #vs img{
     height: 190px;
     width: 120px;
+}
+
+#msg-container{
+    margin-top: 3rem;
+}
+
+#msg{
+    background-color: #081b31;
+    color: white;
+    font-size: 2rem;
+    display: inline;
+    padding: 1rem;
+    border-radius: 1rem;
 }
